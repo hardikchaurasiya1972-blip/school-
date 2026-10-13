@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #FAF7F2;
+    --color-ivory-light: #FDFCF9;
+    --color-cream: #F4EFE6;
+    --color-burgundy: #5A1626;
+    --color-burgundy-dark: #3F0E19;
+    --color-burgundy-light: #7E2437;
+    --color-burgundy-glow: rgba(90, 22, 38, 0.06);
+    --color-gold: #C69238;
+    --color-gold-light: #E8BD6D;
+    --color-gold-dark: #A17120;
+    --color-gold-subtle: #F6ECCC;
+    --color-charcoal: #23201F;
+    --color-charcoal-light: #524C49;
+    --color-charcoal-muted: #7A726D;
+    --color-border: #E8E0D3;
+    --color-border-subtle: #F0E9DF;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Custom scrollbars for elegant archive feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CEBE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C69238;
+}
+
+/* Subtle background textures and parchment feel */
+.parchment-pattern {
+  background-image: radial-gradient(#C69238 0.5px, transparent 0.5px), radial-gradient(#5A1626 0.5px, #FAF7F2 0.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  opacity: 0.04;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #A17120 0%, #C69238 40%, #E8BD6D 70%, #C69238 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.burgundy-gradient-text {
+  background: linear-gradient(135deg, #3F0E19 0%, #5A1626 50%, #7E2437 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
