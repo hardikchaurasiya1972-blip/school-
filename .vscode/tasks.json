@@ -2,11 +2,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "npm",
-            "script": "dev",
-            "problemMatcher": [],
             "label": "npm: dev",
-            "detail": "vite"
+            "type": "shell",
+            "command": "npm.cmd run dev",
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*VITE.*",
+                    "endsPattern": ".*ready in.*"
+                }
+            }
         }
     ]
 }
